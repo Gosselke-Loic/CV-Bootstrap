@@ -1,0 +1,7 @@
+ /* Applique a tout la page, theme de fond, typographie et margin*/
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
