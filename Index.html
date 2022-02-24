@@ -267,9 +267,49 @@
     </section>
 
     <footer class="container-fluid text-center bg-secondary bg-opacity-25 pt-3 pb-3">
-        <!--footer pour le contact avec "mailto:"-->
+        <!--modal pour envoyer avec un email-->
         
-        <button class="btn btn-outline-success btn-lg rounded"><a class="text-dark" id="mailto" href="emailto:gosselkeloic@gmail.com">Contact Email</a></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#Email" class="btn btn-outline-success btn-lg rounded">Send Email</button>
+
+        <div class="modal" id="Email">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Send Email</h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body text-start">
+
+                        <form action="mailto:gosselkeloic@gmail.com" method="GET">
+
+                            <label class="mb-1 lead text-decoration-underline" for="fname">Prênom</label> <br>
+                            <input class="mb-3" type="text" id="fname" name="firstname" placeholder="Prênom" autofocus required> <br>
+
+                            <label class="mb-1 lead text-decoration-underline" for="lname">Nom</label> <br>
+                            <input class="mb-3" type="text" id="lname" name="lastname" placeholder="Nom" required> <br>
+
+                            <label class="mb-1 lead text-decoration-underline" for="email">Votre email</label> <br>
+                            <input class="mb-3" type="email" id="email" name="email" placeholder="Votre email" required> <br>
+
+                            <label class="mb-1 lead text-decoration-underline" for="comment">Comentaire</label> <br>
+                            <textarea class="mb-3" name="subject" id="comment" cols="40" rows="6" placeholder="commentaire...">
+
+                            </textarea> <br>
+
+                            <input type="submit" value="Send">
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer ">
+                        <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </footer>
 
